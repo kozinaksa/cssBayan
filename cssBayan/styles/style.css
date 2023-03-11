@@ -74,10 +74,11 @@ p {
   overflow-wrap: break-word;
 }
 
-header {
-  padding: 2em 0;
+header,
+footer {
+  padding: 1em 0;
   width: 100vw;
-  background-color: darkorange;
+  background-color: rgb(198, 109, 0);;
 }
 
 h1 {
@@ -85,6 +86,15 @@ h1 {
   width: fit-content;
   font-size: 1.5em;
   font-weight: 700;
+  color: cornsilk;
+}
+
+p {
+  margin: 0 auto;
+  width: fit-content;
+  font-size: 0.6em;
+  font-weight: 400;
+  letter-spacing: 0.03em;
 }
 
 .memes-container {
@@ -93,7 +103,7 @@ h1 {
 }
 
 .meme {
-  border-bottom: 0.1em solid darkorange;
+  border-bottom: 0.1em solid rgb(198, 109, 0);;
   margin: 0 auto;
   padding: 0 0 0.5em;
 }
@@ -117,6 +127,7 @@ h1 {
   background-position: center center;
   background-repeat: no-repeat;
   border: none;
+  /* opacity: 0; */
 }
 
 h6 {
@@ -126,18 +137,21 @@ h6 {
 
 .meme__img {
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 60%;
+  max-height: 60%;
+  opacity: 0;
   user-select: none;
+  transition: all .8s ease;
 }
 
 .meme__content {
   display: flex;
   max-height: 0vh;
-  opacity: 0;
   overflow: hidden;
   justify-content: center;
   align-items: center;
-  transition: opacity 1s, max-height .6s ease;
+  transition: all .8s ease;
+  user-select: none;
 }
 
 .meme__content:active .meme__img{
@@ -147,16 +161,23 @@ h6 {
 
 input:checked~.meme__label + .meme__content {
   max-height: 100vh;
+  transition: all .8s ease;
+}
+
+
+input:checked~.meme__label + .meme__content .meme__img {
+  max-width: 100%;
+  max-height: 100%;
   opacity: 1;
-  transition: opacity 1s, max-height .6s ease;
+  transition: all .8s ease;
 }
 
 input:checked + .meme__label .meme__icon {
   background-image: url("../assets/svg/accordion_btn_open.svg");
-  transition: .6s ease;
+  transition: .8s ease;
 }
 
 input:checked + .meme__label h6 {
   color: rgb(198, 109, 0);
-  transition: .6s ease;
+  transition: .8s ease;
 }
