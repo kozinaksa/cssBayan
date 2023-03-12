@@ -166,7 +166,7 @@ input:checked~.meme__label .meme__img {
   }
 
   h6 {
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 
   p {
@@ -186,7 +186,7 @@ input:checked~.meme__label .meme__img {
     background: linear-gradient(rgb(255, 170, 0), rgb(70, 79, 246));;
   }
   body {
-    max-width: 50rem;
+    max-width: 60vw;
     margin: 0 auto;
     overflow-x: hidden;
   }
@@ -198,7 +198,7 @@ input:checked~.meme__label .meme__img {
   }
 
   h6 {
-    font-size: 1.6em;
+    font-size: 1.4em;
   }
 
   p {
@@ -215,7 +215,7 @@ input:checked~.meme__label .meme__img {
   }
 
   .memes-container {
-    max-width: 50rem;
+    max-width: 60vw;
     min-height: 100vh;
     border: none;
     box-shadow: none;
